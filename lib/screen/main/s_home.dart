@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sophia_scheduler/screen/main/header/f_header.dart';
-import 'package:sophia_scheduler/screen/main/staff/f_staff_list.dart';
+import 'package:sophia_scheduler/screen/main/content/f_content.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,13 +11,14 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          // HeaderFrame(),
-          Flexible(child: StaffListFrame())
-        ],
-      ),
-    );
+      return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ContentFrame(),
+          ],
+        ),
+      );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sophia_scheduler/screen/main/s_home.dart';
-import 'package:sophia_scheduler/screen/main/staff/f_staff_list.dart';
 
 void main() {
   runApp(const MyApp());
