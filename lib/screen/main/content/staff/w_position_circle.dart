@@ -9,8 +9,8 @@ class PositionCircleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 16,
-      height: 16,
+      width: 18,
+      height: 18,
       decoration: BoxDecoration(
         color: staffPosition.color,
         shape: BoxShape.circle
