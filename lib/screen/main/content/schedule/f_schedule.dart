@@ -34,6 +34,7 @@ class _ScheduleFrameState extends State<ScheduleFrame> {
             ScheduleTableFrame(
               schedules: widget.schedules,
               staffs: widget.staffs,
+              dateInfos: widget.dateInfos,
             ),
           ],
         ),

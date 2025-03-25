@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sophia_scheduler/data/date_info.dart';
 import 'package:sophia_scheduler/data/staff_data.dart';
 import 'package:sophia_scheduler/screen/main/content/f_content.dart';
 
@@ -7,10 +8,12 @@ class ScheduleTableFrame extends StatefulWidget {
     super.key,
     required this.schedules,
     required this.staffs,
+    required this.dateInfos
   });
 
   final List<StaffData> staffs;
   final Map<String, List<String>> schedules;
+  final List<DateInfo> dateInfos;
 
   @override
   State<ScheduleTableFrame> createState() => _ScheduleTableFrameState();
