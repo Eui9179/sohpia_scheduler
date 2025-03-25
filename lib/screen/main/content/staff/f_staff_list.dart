@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sophia_scheduler/data/staff_position.dart';
 import 'package:sophia_scheduler/data/staff_data.dart';
 import 'package:sophia_scheduler/screen/main/content/staff/w_staff.dart';
 
@@ -17,9 +16,13 @@ class StaffListFrame extends StatelessWidget {
           staffs
               .map(
                 (staff) => Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    StaffWidget(staffData: staff)
+                    StaffWidget(staffData: staff),
+                    SizedBox(
+                      width: 140,
+                      height: 0,
+                      child: Divider(color: Colors.black87, thickness: 0.5),
+                    ),
                   ],
                 ),
               )

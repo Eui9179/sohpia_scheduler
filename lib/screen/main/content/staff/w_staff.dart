@@ -7,13 +7,14 @@ class StaffWidget extends StatelessWidget {
   const StaffWidget({super.key, required this.staffData});
 
   final StaffData staffData;
+  static double width = 140;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(8),
       alignment: Alignment.center,
-      width: 140,
+      width: width,
       height: ContentFrame.rowHeight,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,7 +30,7 @@ class StaffWidget extends StatelessWidget {
                 children: [
                   Text(
                     staffData.name,
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                   ),
                   SizedBox(width: 4),
                   Text(staffData.serialNumber, style: TextStyle(fontSize: 10)),

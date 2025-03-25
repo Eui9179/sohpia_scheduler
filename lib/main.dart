@@ -19,6 +19,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: const MyHomePage(),
+      theme: ThemeData(
+        fontFamily: 'Pretendard'
+      ),
     );
   }
 }
@@ -36,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.black12,
         title: Text("4월"),
       ),
       body: HomeScreen(),
