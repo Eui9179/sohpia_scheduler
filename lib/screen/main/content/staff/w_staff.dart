@@ -13,6 +13,7 @@ class StaffWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(8),
+      decoration: BoxDecoration(border: Border.all(color: Colors.black38)),
       alignment: Alignment.center,
       width: width,
       height: ContentFrame.rowHeight,

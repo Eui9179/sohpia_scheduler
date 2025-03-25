@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:sophia_scheduler/data/date_info.dart';
 import 'package:sophia_scheduler/data/staff_data.dart';
 import 'package:sophia_scheduler/data/staff_position.dart';
 import 'package:sophia_scheduler/screen/main/content/schedule/f_schedule.dart';
 import 'package:sophia_scheduler/screen/main/content/staff/f_staff_list.dart';
+import 'package:sophia_scheduler/screen/main/content/staff/w_staff.dart';
 
 class ContentFrame extends StatelessWidget {
   const ContentFrame({super.key});
 
   static double rowHeight = 64;
+  static double dateHeader = 30;
 
   @override
   Widget build(BuildContext context) {
@@ -30,20 +33,41 @@ class ContentFrame extends StatelessWidget {
       staffs[5].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
     };
 
+
+    List<DateInfo> dateInfos = [];
+    int year = 2025;
+    int month = 4;
+
+    int lastDay = DateTime(year, month, 0).day;
+
+    for (int day = 1; day <= lastDay; day++) {
+      DateTime date = DateTime(year, month, day);
+      String weekday = _getWeekdayName(date.weekday);
+      if (weekday == "Sat") {
+        dateInfos.add(DateInfo(day.toString(), weekday, Colors.indigoAccent));
+      } else if (weekday == "Sun") {
+        dateInfos.add(DateInfo(day.toString(), weekday, Colors.redAccent));
+      } else {
+        dateInfos.add(DateInfo(day.toString(), weekday, Colors.black));
+      }
+    }
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        StaffListFrame(staffs: staffs),
-        SizedBox(
-          width: 0.5,
-          height: rowHeight * staffs.length,
-          child: VerticalDivider(
-            color: Colors.black,
-            thickness: 0.5,
-          ),
+        Column(
+          children: [
+            SizedBox(height: dateHeader,),
+            StaffListFrame(staffs: staffs),
+          ],
         ),
-        ScheduleFrame(staffs: staffs, schedules: schedules),
+        ScheduleFrame(staffs: staffs, schedules: schedules, dateInfos: dateInfos),
       ],
     );
+  }
+
+  String _getWeekdayName(int weekday) {
+    const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    return weekdays[weekday - 1];
   }
 }

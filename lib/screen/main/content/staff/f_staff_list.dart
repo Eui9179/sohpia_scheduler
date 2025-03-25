@@ -12,21 +12,11 @@ class StaffListFrame extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children:
-          staffs
-              .map(
-                (staff) => Column(
-                  children: [
-                    StaffWidget(staffData: staff),
-                    SizedBox(
-                      width: 140,
-                      height: 0,
-                      child: Divider(color: Colors.black87, thickness: 0.5),
-                    ),
-                  ],
-                ),
-              )
-              .toList(),
+      children: [
+        ...staffs.map(
+          (staff) => StaffWidget(staffData: staff),
+        ),
+      ],
     );
   }
 }
