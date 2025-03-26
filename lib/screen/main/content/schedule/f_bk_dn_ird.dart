@@ -5,6 +5,7 @@ class BkDnIrdFrame extends StatelessWidget {
   const BkDnIrdFrame({super.key, required this.dateInfos});
 
   final List<DateInfo> dateInfos;
+  final List<BkDnIRd> bkDnIrds;
 
   @override
   Widget build(BuildContext context) {
