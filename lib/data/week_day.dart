@@ -7,7 +7,7 @@ enum WeekDay {
   SAT("Sat"),
   SUN("Sun");
 
-  const WeekDay(this.weekDay)
+  const WeekDay(this.weekDay);
 
   final String weekDay;
 }

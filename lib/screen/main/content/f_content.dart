@@ -4,13 +4,12 @@ import 'package:sophia_scheduler/data/staff_data.dart';
 import 'package:sophia_scheduler/data/staff_position.dart';
 import 'package:sophia_scheduler/screen/main/content/schedule/f_schedule.dart';
 import 'package:sophia_scheduler/screen/main/content/staff/f_staff_list.dart';
-import 'package:sophia_scheduler/screen/main/content/staff/w_staff.dart';
 
 class ContentFrame extends StatelessWidget {
   const ContentFrame({super.key});
 
   static double rowHeight = 64;
-  static double dateHeader = 30;
+  static double dateHeader = 20;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +32,6 @@ class ContentFrame extends StatelessWidget {
       staffs[5].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
     };
 
-
     List<DateInfo> dateInfos = [];
     int year = 2025;
     int month = 4;
@@ -50,6 +48,9 @@ class ContentFrame extends StatelessWidget {
       }
     }
 
+    List<int> bk = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
+    List<int> dnIrd = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
+
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
@@ -58,10 +59,12 @@ class ContentFrame extends StatelessWidget {
           Column(
             children: [
               SizedBox(height: dateHeader,),
+              SizedBox(height: dateHeader,),
+              SizedBox(height: dateHeader,),
               StaffListFrame(staffs: staffs),
             ],
           ),
-          ScheduleFrame(staffs: staffs, schedules: schedules, dateInfos: dateInfos),
+          ScheduleFrame(staffs: staffs, schedules: schedules, dateInfos: dateInfos, bk: bk, dnIrd: dnIrd),
         ],
       ),
     );
