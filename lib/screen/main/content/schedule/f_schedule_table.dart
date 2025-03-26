@@ -8,7 +8,7 @@ class ScheduleTableFrame extends StatefulWidget {
     super.key,
     required this.schedules,
     required this.staffs,
-    required this.dateInfos
+    required this.dateInfos,
   });
 
   final List<StaffData> staffs;
@@ -35,11 +35,14 @@ class _ScheduleTableFrameState extends State<ScheduleTableFrame> {
         ...widget.staffs.map((staff) {
           return TableRow(
             children:
-                widget.schedules[staff.name]!.map((schedule) {
+                widget.schedules[staff.name]!.asMap().entries.map((entry) {
+                  int index = entry.key;
+                  String schedule = entry.value;
                   return Container(
                     width: ContentFrame.rowHeight,
                     height: ContentFrame.rowHeight,
                     alignment: Alignment.center,
+                    color: widget.dateInfos[index].backgroundColor,
                     child: Text(schedule),
                   );
                 }).toList(),

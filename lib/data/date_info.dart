@@ -3,7 +3,8 @@ import 'package:flutter/animation.dart';
 class DateInfo {
   final String day;
   final String weekDay;
-  final Color color;
+  final Color textColor;
+  final Color backgroundColor;
 
-  DateInfo(this.day, this.weekDay, this.color);
+  DateInfo(this.day, this.weekDay, this.textColor, this.backgroundColor);
 }

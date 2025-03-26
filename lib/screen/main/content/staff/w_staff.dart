@@ -31,7 +31,7 @@ class StaffWidget extends StatelessWidget {
                 children: [
                   Text(
                     staffData.name,
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(width: 4),
                   Text(staffData.serialNumber, style: TextStyle(fontSize: 10)),
@@ -46,7 +46,7 @@ class StaffWidget extends StatelessWidget {
               SizedBox(width: 1),
               Text(
                 staffData.staffPosition.position,
-                style: TextStyle(fontSize: 14),
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
               ),
             ],
           ),

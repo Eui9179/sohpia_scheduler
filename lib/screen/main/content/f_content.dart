@@ -37,32 +37,33 @@ class ContentFrame extends StatelessWidget {
     List<DateInfo> dateInfos = [];
     int year = 2025;
     int month = 4;
-
     int lastDay = DateTime(year, month, 0).day;
-
     for (int day = 1; day <= lastDay; day++) {
       DateTime date = DateTime(year, month, day);
       String weekday = _getWeekdayName(date.weekday);
       if (weekday == "Sat") {
-        dateInfos.add(DateInfo(day.toString(), weekday, Colors.indigoAccent));
+        dateInfos.add(DateInfo(day.toString(), weekday, Colors.indigoAccent, Color.fromRGBO(213, 219, 255, 100)));
       } else if (weekday == "Sun") {
-        dateInfos.add(DateInfo(day.toString(), weekday, Colors.redAccent));
+        dateInfos.add(DateInfo(day.toString(), weekday, Colors.redAccent, Color.fromRGBO(255, 205, 205, 100)));
       } else {
-        dateInfos.add(DateInfo(day.toString(), weekday, Colors.black));
+        dateInfos.add(DateInfo(day.toString(), weekday, Colors.black, Colors.white));
       }
     }
 
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Column(
-          children: [
-            SizedBox(height: dateHeader,),
-            StaffListFrame(staffs: staffs),
-          ],
-        ),
-        ScheduleFrame(staffs: staffs, schedules: schedules, dateInfos: dateInfos),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Column(
+            children: [
+              SizedBox(height: dateHeader,),
+              StaffListFrame(staffs: staffs),
+            ],
+          ),
+          ScheduleFrame(staffs: staffs, schedules: schedules, dateInfos: dateInfos),
+        ],
+      ),
     );
   }
 

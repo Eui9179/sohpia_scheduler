@@ -18,7 +18,7 @@ class DateInfoFrame extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               "${dateInfo.day} ${dateInfo.weekDay}",
-              style: TextStyle(color: dateInfo.color),
+              style: TextStyle(color: dateInfo.textColor, fontWeight: FontWeight.bold),
             ),
           ),
         ),
