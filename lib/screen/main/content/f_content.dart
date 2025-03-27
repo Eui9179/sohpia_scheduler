@@ -3,6 +3,7 @@ import 'package:sophia_scheduler/data/date_info.dart';
 import 'package:sophia_scheduler/data/staff_data.dart';
 import 'package:sophia_scheduler/data/staff_position.dart';
 import 'package:sophia_scheduler/screen/main/content/schedule/f_schedule.dart';
+import 'package:sophia_scheduler/screen/main/content/schedule/w_sub_title.dart';
 import 'package:sophia_scheduler/screen/main/content/staff/f_staff_list.dart';
 
 class ContentFrame extends StatelessWidget {
@@ -19,6 +20,16 @@ class ContentFrame extends StatelessWidget {
       StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
       StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
       StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
+      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
+      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
+      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
+      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
+      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
+      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
+      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
+      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
+      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
+      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
       StaffData("이다은", "daeun", "000000", StaffPosition.TEAM_MEMBER2, 30, 8),
       StaffData("이준범", "junbum", "000000", StaffPosition.TEAM_LEADER, 30, 8),
     ];
@@ -30,6 +41,16 @@ class ContentFrame extends StatelessWidget {
       staffs[3].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
       staffs[4].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
       staffs[5].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
+      staffs[6].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
+      staffs[7].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
+      staffs[8].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
+      staffs[9].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
+      staffs[10].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
+      staffs[11].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
+      staffs[12].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
+      staffs[13].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
+      staffs[14].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
+      staffs[15].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
     };
 
     List<DateInfo> dateInfos = [];
@@ -51,21 +72,25 @@ class ContentFrame extends StatelessWidget {
     List<int> bk = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
     List<int> dnIrd = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
 
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Column(
+    return Expanded(
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: dateHeader,),
-              SizedBox(height: dateHeader,),
-              SizedBox(height: dateHeader,),
-              StaffListFrame(staffs: staffs),
+              Column(
+                children: [
+                  SubTitleWidget(title: "BK"),
+                  SubTitleWidget(title: "DN + IRD"),
+                  SubTitleWidget(title: "Day"),
+                  StaffListFrame(staffs: staffs),
+                ],
+              ),
+              ScheduleFrame(staffs: staffs, schedules: schedules, dateInfos: dateInfos, bk: bk, dnIrd: dnIrd),
             ],
           ),
-          ScheduleFrame(staffs: staffs, schedules: schedules, dateInfos: dateInfos, bk: bk, dnIrd: dnIrd),
-        ],
+        ),
       ),
     );
   }
