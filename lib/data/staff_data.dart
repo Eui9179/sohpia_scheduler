@@ -8,5 +8,25 @@ class StaffData {
   int workCount;
   int offCount;
 
-  StaffData(this.name, this.engName, this.serialNumber, this.staffPosition, this.workCount, this.offCount);
+  StaffData(
+    this.name,
+    this.engName,
+    this.serialNumber,
+    this.staffPosition,
+    this.workCount,
+    this.offCount,
+  );
+
+  void subWorkCount() {
+    workCount--;
+  }
+
+  void subOffCount() {
+    offCount--;
+  }
+
+  @override
+  String toString() {
+    return 'StaffData{name: $name, engName: $engName, serialNumber: $serialNumber, staffPosition: $staffPosition, workCount: $workCount, offCount: $offCount}';
+  }
 }

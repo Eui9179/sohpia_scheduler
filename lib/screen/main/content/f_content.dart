@@ -18,39 +18,15 @@ class ContentFrame extends StatelessWidget {
     List<StaffData> staffs = [
       StaffData("이소은", "sophia", "000000", StaffPosition.DOFB, 30, 8),
       StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
-      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
-      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
-      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
-      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
-      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
-      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
-      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
-      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
-      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
-      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
-      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
-      StaffData("이의찬", "leui", "000000", StaffPosition.TEAM_MEMBER1, 30, 8),
       StaffData("이다은", "daeun", "000000", StaffPosition.TEAM_MEMBER2, 30, 8),
       StaffData("이준범", "junbum", "000000", StaffPosition.TEAM_LEADER, 30, 8),
     ];
 
     Map<String, List<String>> schedules = {
-      staffs[0].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[1].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[2].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[3].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[4].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[5].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[6].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[7].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[8].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[9].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[10].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[11].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[12].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[13].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[14].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
-      staffs[15].name: ["C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N","C", "F", "N", "F", "N","C", "F", "N", "F", "N","C", "F", "N"],
+      staffs[0].name: ["C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "F", "N", "C", "F", "N", "F", "N", "C", "F", "N"],
+      staffs[1].name: ["C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "F", "N", "C", "F", "N", "F", "N", "C", "F", "N"],
+      staffs[2].name: ["C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "F", "N", "C", "F", "N", "F", "N", "C", "F", "N"],
+      staffs[3].name: ["C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "C", "F", "N", "F", "N", "C", "F", "N", "F", "N", "C", "F", "N"],
     };
 
     List<DateInfo> dateInfos = [];

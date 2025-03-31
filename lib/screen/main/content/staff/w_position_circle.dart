@@ -12,7 +12,6 @@ class PositionCircleWidget extends StatelessWidget {
       width: 18,
       height: 18,
       decoration: BoxDecoration(
-        color: staffPosition.color,
         shape: BoxShape.circle
       ),
     );
