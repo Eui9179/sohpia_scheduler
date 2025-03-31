@@ -53,7 +53,6 @@ void main() {
     // 근무 일 없는 사람 필터링
     available.removeWhere((s) => s.workCount == 0);
 
-    available.removeWhere((s) => lastShift[s] == 'J');
     // 오후 근무 인원
     available.shuffle(random);
     List<StaffData> afternoonShift = available.take(counts[1]).toList();
@@ -61,6 +60,7 @@ void main() {
     // TODO 인원 수 부족으로 최대 못 뽑고 있음.
     // 오전 근무 인원
     // 이전 날 오후 근무 시 오전 근무 제외
+    available.removeWhere((s) => lastShift[s] == 'J');
     available.removeWhere((s) => afternoonShift.contains(s));
     available.shuffle(random);
     List<StaffData> morningShift = available.take(counts[0]).toList();
