@@ -6,7 +6,7 @@ import 'package:sophia_scheduler/data/staff_position.dart';
 
 void main() {
   List<StaffData> staffs = [
-    // StaffData("윤혁상", "David", "000000", StaffPosition.DOFB, 22, 8),
+    StaffData("윤혁상", "David", "000000", StaffPosition.DOFB, 22, 8),
     StaffData("김한철", "Aiden", "000000", StaffPosition.MGR, 22, 8),
     StaffData("이소은", "sophia", "000000", StaffPosition.ASST_MGR, 22, 8),
     StaffData("박연준", "Roy", "000000", StaffPosition.TEAM_LEADER, 22, 8),
@@ -34,12 +34,38 @@ void main() {
     'Tuesday': [5, 5],
     'Wednesday': [5, 5],
     'Thursday': [5, 5],
-    'Friday': [5, 4],
-    'Saturday': [6, 8],
-    'Sunday': [9, 6],
+    // 'Friday': [5, 4],
+    // 'Saturday': [6, 8],
+    // 'Sunday': [9, 6],
+    'Friday': [5, 5],
+    'Saturday': [5, 5],
+    'Sunday': [5, 5],
   };
 
-  Map<String, Map<String, List<StaffData>>> schedule = {};
+  // date : { C : [staff1, staff2, ...]}
+  Map<String, Map<String, List<StaffData>>> schedule = {
+    "2025-04-01": {
+      "C": [staffs[0]],
+    },
+    "2025-04-02": {
+      "C": [staffs[0]],
+    },
+    "2025-04-03": {
+      "C": [staffs[0]],
+    },
+    "2025-04-04": {
+      "C": [staffs[0]],
+    },
+    "2025-04-05": {
+      "C": [staffs[0]],
+    },
+    "2025-04-06": {
+      "OFF": [staffs[0]],
+    },
+    "2025-04-07": {
+      "OFF": [staffs[0]],
+    },
+  };
 
   for (
     var date = startDate;
@@ -48,6 +74,33 @@ void main() {
   ) {
     String weekday = DateFormat.EEEE().format(date);
     List<int> counts = workforce[weekday]!;
+
+    // 주임, 대리 풀
+    List<StaffData> teamAsstMGRAndLeaders = List.from(staffs);
+    teamAsstMGRAndLeaders.removeWhere(
+      (s) =>
+          s.staffPosition != StaffPosition.TEAM_LEADER &&
+          s.staffPosition != StaffPosition.ASST_MGR,
+    );
+
+    // 주임 풀
+    List<StaffData> teamLeaders = List.from(staffs);
+    teamLeaders.removeWhere(
+      (s) => s.staffPosition != StaffPosition.TEAM_LEADER,
+    );
+
+    // 사원 풀
+    List<StaffData> teamMembers = List.from(staffs);
+    teamMembers.removeWhere(
+      (s) =>
+          s.staffPosition != StaffPosition.TEAM_MEMBER1 &&
+          s.staffPosition != StaffPosition.TEAM_MEMBER2,
+    );
+
+    // 과장 출근 시
+
+    // 과장 휴무 시
+
     List<StaffData> available = List.from(staffs);
 
     // 근무 일 없는 사람 필터링
@@ -57,7 +110,6 @@ void main() {
     available.shuffle(random);
     List<StaffData> afternoonShift = available.take(counts[1]).toList();
 
-    // TODO 인원 수 부족으로 최대 못 뽑고 있음.
     // 오전 근무 인원
     // 이전 날 오후 근무 시 오전 근무 제외
     available.removeWhere((s) => lastShift[s] == 'J');
@@ -103,4 +155,10 @@ void main() {
       });
     });
   });
+
+  // void _removeLastJ() {}
+
+  // void _removeNoWorkCount() {}
+
+  // List<StaffData> _peekRandom() {}
 }
